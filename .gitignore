@@ -283,7 +283,7 @@ cython_debug/
 jhelpers/
 logger.log
 /data/corpus/corpus_ms0_ss
-/data/corpus/one_pdf_corpus
+#/data/corpus/one_pdf_corpus
 /data/gzip/sample_meta.jsonl.gz
 /data/gzip/sample_pdf.jsonl.gz
 
