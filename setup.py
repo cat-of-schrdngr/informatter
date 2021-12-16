@@ -3,6 +3,10 @@ from distutils.core import setup
 # Specifying Dependencies
 # https://python-packaging.readthedocs.io/en/latest/dependencies.html
 
+# https://gist.github.com/rochacbruno/ed19c5d9ba9bb50391a2
+# https://pypa-build.readthedocs.io/en/stable/index.html
+# https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
+
 setup(
     name='informatter',
     version='0.1',
