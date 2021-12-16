@@ -280,6 +280,7 @@ dmypy.json
 cython_debug/
 
 # Inner workings: jFiles&Dirs
+.idea/
 jhelpers/
 logger.log
 /data/corpus/corpus_ms0_ss
