@@ -208,3 +208,90 @@ moreover PGED-Gd PGEAs exhibited significantly higher transfection efficiencies 
 the chelation of Gd 3+ ions imparted PGED-Gd PGEAs with effective MRI functionality without adverse_effects on gene_transfection processes
 these unique features could allow PGED-Gd PGEA to become a competitive multifunctional gene_delivery system
 figure <nUm> linear fitting of the inverse T <nUm> and the T <nUm> -weighted MR images of a PGED-Gd PGEA1 solutions and b C6 and hep_G2 cells treated with PGED-Gd PGEA1 at different Gd concentrations
+the best known binary compound of Mg and Si i.e. magnesium_silicide Mg <nUm> Si has_been studied extensively due to its potential_applications e.g. infrared photonic and thermoelectric energy conversion devices
+five other members of the Mg-Si binary family including MgSi <nUm> Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> MgSi and Mg <nUm> Si <nUm> have subsequently been identified suggested experimentally and occasionally studied computationally when precipitation_hardened alloys of Al with Mg and Si were explored <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> of them the P <nUm> mmm phase of MgSi and the P <nUm> <nUm> m phase of Mg <nUm> Si <nUm> have_been confirmed experimentally <nUm> <nUm> and studied computationally
+<nUm> <nUm> the others e.g. MgSi <nUm> Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> were proposed computationally as candidates for many still_unknown phases of the Al-Mg-Si_alloys
+specifically Mg <nUm> Si <nUm> assumed_to_be in a C2 m monoclinic phase was initially proposed <nUm> <nUm> as the β precipitate of the Al MgSi alloys but this proposal has then caught considerable_doubt
+<nUm> <nUm> <nUm> <nUm> <nUm> nevertheless the observation of these Mg-Si binary compounds seems to contradict some firstprinciples calculations performed at zero pressure P <nUm> GPa <nUm> <nUm> <nUm> revealing that only Mg <nUm> Si is thermodynamically_stable while other Mg-Si binary compounds are unstable
+among these binary compounds Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> were recently predicted <nUm> to become stable under certain ranges of compressive_hydrostatic pressure
+this computational study suggests the possible role of pressure the thermodynamic variable that may_be realized in certain experimental conditions in the observations of Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> and possibly other Mg-Si binary compounds as well
+<nUm> In fact pressure has_already been known as a key_factor stabilizing numerous new solid materials with exotic functionalities e.g. high energy density and high temperature superconductivity <nUm> <nUm> <nUm> <nUm> <nUm> <nUm> and inspiring a great_deal_of_interest from the community
+compared to Mg <nUm> Si not much was known <nUm> about MgSi MgSi <nUm> Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> and other possible binary compounds of this family
+recently the thermodynamic stability and the electronic structure of Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> whose the hexagonal P <nUm> <nUm> m structure was proposed <nUm> <nUm> <nUm> as the β precipitate of the Al-Mg-Si_alloy systems have_been exploited by first_principles computations
+<nUm> <nUm> <nUm> <nUm> under compressive pressure P <nUm> GPa and above they were predicted <nUm> to be dynamically_stable and share the metallic semimetallic characteristics with Mg <nUm> Si
+to our best_knowledge an in-depth_understanding of the other binary compounds if realized remains unavailable
+this contribution addresses these two points
+by searching for low energy structures of <nUm> Mg-Si binary compounds with varying Mg content at the level of density_functional_theory DFT <nUm> <nUm> we identified numerous structures that are significantly lower in energy than those currently recognized
+because the number of Mg-Si binary compounds considered in this comprehensive work is sufficiently_large the stability of these compounds can_be better accessed
+from this analysis we suggest_that MgSi <nUm> MgSi and Mg <nUm> Si <nUm> are likely pressure stabilized materials while confirming and suggesting the thermodynamical instability of Mg <nUm> Si <nUm> 19-23 and Mg <nUm> Si <nUm> ).
+we_recommend to explicitly_consider external pressure when discussing the thermodynamical stability of Mg-Si based solids and presumably other solids as well
+for those identified to be thermodynamically_stable their dynamical stability electronic structure and possible superconductivity were studied using DFT_computations
+In addition to the aforementioned results the dataset of <nUm> low energy structures identified herein is also useful for the community in the context of the emerging age of materials informatics
+<nUm> <nUm> <nUm> because this dataset was prepared by exhaust low energy structure searches our first_principles_calculations were performed at the level of density_functional_theory using specifically the version implemented in vienna_ab_initio simulation_package <nUm> <nUm> <nUm> <nUm> we used the kinetic energy cutoff of <nUm> eV for the plane_wave_basis_set and the generalized_gradient_approximation Perdew-Burke-Ernzerhof functional <nUm> for the exchange correlation XC energies
+the brillouin_zone of the examined structures was sampled by a monkhorst pack k-point mesh <nUm> with a spacing of <nUm> A − <nUm> in the reciprocal_space
+low energy structures of the possible Mg-Si binary compounds was searched using the minima hopping method <nUm> <nUm> <nUm> which has_been successfully used for different material classes <nUm> <nUm> <nUm> <nUm> <nUm> this method relies on exploring the DFT energy landscape by alternating moleculardynamics runs for escaping the current local minimum and geometry_optimization runs for identifying the next local minimum
+As the energy landscapes of the examined materials are constructed at the DFT level the searches are reliable but generally expensive
+In principles searches can_be performed at any pressure as performed in refs
+<nUm> however given the number of binary compounds considered is large 13 and that the pressure window of interest is unknown the searches for each MgSi binary were conducted only at zero pressure for some certain numbers of formula_units and equivalently number of atoms -see table I for details
+the structures within a windows of <nUm> meV atom from the lowest- energy structure were selected and studied at varying elevated_pressures
+this procedure as will subsequently be shown in this_work captures the stable stoichiometries of the Mg x Si 1-x identified within <nUm> − <nUm> GPa the pressure range of our current interest
+their symmetry was analyzed using findsym <nUm> while vesta <nUm> was used for visualization
+the crystallographic information format structure files were prepared with pymatgen
+phonon related calculations reported herein including those related to the phonon mediated superconductivity of the predicted structures as discussed subsequently were performed using the linear_response approach <nUm> <nUm> as implemented in abinit <nUm> employing the HartwigsenGoedecker hutter norm conserving pseudopotentials <nUm> a plane_wave cutoff energy of <nUm> hatree <nUm> <nUm> eV and the PBE XC functional
+In fact because of some intractable uncertainty material structures determined computationally or experimentally may actually be dynamically_unstable and in this case proper phonon calculations may_be used to refine them
+<nUm> <nUm> the phonon band structure reported in this_work are used to track the dynamical stability of the structure predicted
+correction to the energy from the lattice_vibrations which can_be computed from the phonon density_of_states as performed in refs. <nUm> <nUm> and <nUm> was not considered here because of two reasons
+first the computational resource required for more than three hundred structures at different values of pressure is prohibitively enormous and second zero point energy corrections tend to cancel_out leaving only a part of such small_amount contributing to the relative energy difference_between structures
+A thermodynamic stability A summary of the low energy structures identified in this_work is given in table II while their detailed cystallographic information is provided in the supplemental materials
+<nUm> except Mg <nUm> Si new ground_state structures were identified for the others at P <nUm> GPa
+for MgSi <nUm> and MgSi the new lowest energy structures r3m and P <nUm> <nUm> m are significantly lower than the previously_reported counterparts in e DFT by <nUm> meV atom and <nUm> meV atom respectively
+for Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> the advance in e DFT of the new structures is smaller but remains noticeable
+the thermodynamic stability of the identified structures are examined by four convex hulls shown_in_fig. <nUm>
+they were constructed at P <nUm> <nUm> <nUm> and <nUm> GPa from the formation DFT enthalpy H DFT defined as here H DFT Mg x Si 1-x H DFT Mg and H DFT Si are the DFT enthalpies computed for Mg x Si 1-x the ground_state hexagonal P <nUm> <nUm> mmc structure of Mg and the ground_state cubic F d3m structure of Si
+In the definition H DFT ≡ e DFT P V of the DFT enthalpy the DFT energy e DFT and the volume of the simulation box V were computed at the hydrostatic_pressure P
+In consistence with previous_reports <nUm> only Mg <nUm> Si is thermodynamically_stable at P <nUm> GPa
+starting from P <nUm> GPa MgSi <nUm> becomes stable in different phases i.e. imma and P <nUm> mmm at P <nUm> and <nUm> GPa respectively
+the predicted imma structure with a <nUm> Å b <nUm> Å c <nUm> Å is about <nUm> meV atom lower than the previously_proposed imma structure <nUm> with a <nUm> Å b <nUm> Å c <nUm> Å but they appear_to_be just slightly different when the motifs are visualized
+At <nUm> GPa and <nUm> GPa the predicted P <nUm> mmm structure of MgSi <nUm> is new as shown_in_fig. <nUm>
+similarly the predicted r3c structure of Mg <nUm> Si <nUm> summarized in table II is lower than the P <nUm> <nUm> m structure previously_proposed <nUm> <nUm> and studied computationally <nUm> by <nUm> − <nUm> meV atom but a closer investigation indicates that the difference_between_them is also mall see supple- mental materials <nUm> for a visualization
+considering the small energy difference the recent conclusion that between <nUm> and <nUm> GPa Mg <nUm> Si can decompose into Mg <nUm> Si <nUm> and Mg without energy cost <nUm> remains_valid as shown_in_fig. <nUm>
+for MgSi the previously_proposed P <nUm> mmm structure <nUm> is higher than the predicted P <nUm> <nUm> m structure by <nUm> meV atom at P <nUm> GPa
+however this_shortcoming is rapidly diminished as P increases and starting from P <nUm> GPa the P <nUm> mmm structure of MgSi becomes lowest in H DFT
+the above observation strongly hints that MgSi <nUm> <nUm> and specifically MgSi <nUm> and Mg <nUm> Si <nUm> <nUm> whose experimentally observed structures become lowest in enthalpy within some ranges of pressure are indeed pressurestabilized materials
+from the computational point_of_view hydrostatic and or non-hydrostatics pressure should_be explicitly considered when discussing the thermodynamic stability of the Mg-Si binary compounds
+this conclusion which places MgSi <nUm> MgSi and Mg <nUm> Si <nUm> into a class of pressure stabilized metastable materials like LiK(BH <nUm> <nUm> <nUm> aligns well with the recent rising role of pressure that has_been extensively discussed in the literature of materials discovery
+on the other_hand table II and fig. <nUm> show that Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> which have also_been reported_previously <nUm> <nUm> <nUm> <nUm> are thermodynamically_unstable at pressure P up to <nUm> GPa
+for both of them their lowestenthalpy structure are always about <nUm> − <nUm> meV atom above the convex hulls
+this observation is consistent with more recent_findings <nUm> <nUm> <nUm> <nUm> <nUm> among the other binary compounds examined Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> are nearly stable within <nUm> − <nUm> GPa where their lowest enthalpy structures are just about <nUm> − <nUm> meV atom about the convex hulls
+although no direct report for these compounds are currently_available there are however a fair number of phases of the Al-Mg-Si_alloys that have yet been resolved
+<nUm> As summarized by table II and fig. <nUm> pressure strongly alters the energetic ordering of the low lying structures being an important_factor leading to the significant complexity of the systems
+although MgSi <nUm> is not thermodynamically_stable at <nUm> GPa it becomes stable at P <nUm> GPa and above
+for completeness we studied the lowest_lying structures of this compound at <nUm> GPa r3m <nUm> GPa imma <nUm> GPa and <nUm> GPa both P <nUm> mmm
+these structures which are visualized in fig. <nUm> are all dynamically_stable as demonstrated by the computed phonon band structures shown in supplemental material
+<nUm> their computed electronic structures are given in fig. <nUm> showing that these phases are all metallic
+At <nUm> GPa the r3m phase features profound local maximum of the density of electron states right above_the_fermi_level e F while at <nUm> GPa <nUm> GPa and <nUm> GPa such local maxima <nUm> states eV for imma phase at <nUm> GPa are exactly at the fermi_level
+the conduction_bands contributing to these local maxima are primarily characterized by p-type bonding between adjacent Si atoms
+they cross e F several times having multiple extremes and or saddle_points exactly at e F leading to the van hope singularities
+such flat_band steep band character which is a signature of possible superconductivity <nUm> has_been widely_used <nUm> <nUm> <nUm> in the literature as a screening criterion when predicting superconducting structures of solids
+the phonon mediated superconducting properties of these predicted structures were computed with abinit package <nUm> employing the linear_response approach <nUm> <nUm> In short we estimated the critical temperature T_c using the allan dynes modified McMillan 's approximation of the eliashberg_equation according to <nUm> <nUm> T here λ is the overall electron phonon_coupling_strength that can_be computed from the frequency dependent eliashberg_spectral_function ω log the logarithmic average phonon frequency and µ the coulomb_pseudopotential for which the typical range of value from <nUm> to <nUm> <nUm> was explored
+for the r3m and P <nUm> mmm structures <nUm> atoms per_primitive cell the k-point mesh was chosen to be <nUm> <nUm> <nUm> while for the imma with larger primitive_cell <nUm> atoms the k-point mesh was <nUm> <nUm> <nUm>
+for all of these phase the q-point mesh was <nUm> <nUm> <nUm>
+we found that the experimentally realized imma phase of MgSi <nUm> is superconducting at T_c <nUm> K the other structural phases of this compound i.e. r3m and P <nUm> mmm also display superconducting characteristics at the critical temperatures T_c up to <nUm> K as shown_in_fig. <nUm>
+the proposed P <nUm> mmm structure of MgSi is composed_of_alternating Mg and Si rows along_<nUm>_direction
+At <nUm> GPa and <nUm> GPa it is higher than the P <nUm> <nUm> m and C2 m structures predicted herein by <nUm> meV atom and <nUm> meV atom respectively
+At higher pressure the P <nUm> mmm structure becomes lowest in energy compared to the other structures of MgSi
+this phase is about <nUm> meV atom above the convex_hull at <nUm> GPa while at <nUm> GPa it is thermodynamically_stable
+crystallographic information visualizations and calculated phonon structures of these phases are given in supplemental materials showing that they are distinct and dynamically_stable
+all of these phases are metallic as revealed in fig. <nUm> for their calculated electronic structures
+At <nUm> GPa and <nUm> GPa the P <nUm> <nUm> m and C2 m structures feature quite high density of electron states_at_the_fermi_level e F i.e. <nUm> and <nUm> states eV respectively
+the density of electron states at e F of the P <nUm> mmm structure at <nUm> GPa and <nUm> GPa is lower roughly <nUm> states eV due to the large primitive cells <nUm> atoms and low symmetries monoclinic of the P <nUm> <nUm> m and C2 m structures calculations for their T_c are substantially heavy and for this reason we_have not done this_work
+however it is possible that these phases are superconducting at <nUm> and <nUm> GPa with relatively high critical temperatures possibly about <nUm> K the family of Mg-Si binary compounds is rich of energetically competing phases which are easily reordered by external pressure
+this_work_provides some insights into the experimental_observations of MgSi <nUm> MgSi Mg <nUm> Si <nUm> Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> whose proposed structures were found computationally to be thermodynamically_unstable at ambient_conditions
+we_find_that at some finite pressures the low energy structures of MgSi <nUm> MgSi and Mg <nUm> Si <nUm> become stable
+this result suggests_that these binary compounds may likely be pressure stabilized materials
+the other two binary compounds considered i.e. Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> are found_to_be unstable at pressure up to <nUm> GPa
+this_work supports previous experimental and computational studies <nUm> <nUm> <nUm> <nUm> <nUm> claiming that the β phase of the Al-Mg-Si_alloys is not Mg <nUm> Si <nUm> as initially proposed
+similarly the conjectured presence of Mg <nUm> Si <nUm> <nUm> <nUm> remains_an_open_question
+on the other_hand some other compounds including Mg <nUm> Si <nUm> and Mg <nUm> Si <nUm> are nearly stable at some ranges of pressure and thus they may_exist
+apparently pressure should_be_considered for any computational studies of the formation of Mg-Si based solids especially those found in their metastable_phases
+finally we_find_that MgSi <nUm> is a potential superconductor within a wide_range of pressure with the critical temperature of the order of <nUm> K

@@ -1,4 +1,4 @@
-from corpus import time_main, metadata_to_csv, save_corpus, one_pdf
+from src.corpus import time_main, metadata_to_csv, save_corpus, one_pdf
 
 
 @time_main

@@ -1,15 +1,28 @@
 import sys
 from pathlib import Path
+
 from dotenv import dotenv_values
 
-BASE_DIR = Path(dotenv_values(".env")["BASE_DIR"])
+import os
+# from dotenv import load_dotenv
+
+dotenv_path = Path("src/.env")
+print(dotenv_path)
+
+# load_dotenv(dotenv_path=dotenv_path)
+
+# BASE_DIR = os.getenv('BASE_DIR')
+BASE_DIR = Path(dotenv_values(dotenv_path)["BASE_DIR"])
+# BASE_DIR = Path(dotenv_values(".env")["BASE_DIR"])
+print("BASE_DIR:", BASE_DIR)
+
 
 # Path to zipped S2ORC metadata and full pdf files.
 s2orc_mzip = "s2orc/20200705v1/full/metadata/gzip"
 s2orc_pzip = "s2orc/20200705v1/full/pdf_parses/gzip"
 
-metadata_path = Path.joinpath(Path.home(), BASE_DIR, s2orc_mzip)
-pdf_path = Path.joinpath(Path.home(), BASE_DIR, s2orc_pzip)
+metadata_path = Path.joinpath(BASE_DIR, s2orc_mzip)
+pdf_path = Path.joinpath(BASE_DIR, s2orc_pzip)
 
 # A path to file containing saved corpus.
 corpus = Path.cwd() / "data/corpus/corpus"

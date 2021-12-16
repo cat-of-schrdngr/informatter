@@ -8,8 +8,8 @@ import pandas as pd
 from pathlib import Path
 from typing import Union, Generator
 
-from config import *
-from corpus import timer
+from src.config import *
+from src.corpus import timer
 
 from mat2vec.processing import MaterialsTextProcessor
 

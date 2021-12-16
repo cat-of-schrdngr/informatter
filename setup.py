@@ -17,7 +17,7 @@ setup(
     author='Mina',
     author_email='me@mine_address.com',
     license='...',
-    packages=['corpus'],
+    packages=['src', 'corpus'],
     install_requires=['mat2vec'],
     dependency_links=['https://github.com/materialsintelligence/mat2vec.git']
 )
