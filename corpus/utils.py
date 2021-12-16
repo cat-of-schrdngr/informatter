@@ -58,4 +58,8 @@ def time_main(func):
     return wrap_main
 
 
-__all__ = ["timer", "time_main", "_setup_logger"]
+__all__ = [
+    "timer",
+    "time_main",
+    "_setup_logger"
+]

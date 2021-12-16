@@ -1,5 +1,4 @@
-from corpus.utils import time_main
-from corpus.extractor import metadata_to_csv, save_corpus, one_pdf
+from corpus import time_main, metadata_to_csv, save_corpus, one_pdf
 
 
 @time_main
