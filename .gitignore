@@ -279,13 +279,13 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-### jFiles&Dirs
+# Inner workings: jFiles&Dirs
 jhelpers/
+logger.log
 /data/corpus/corpus_ms0_ss
-#meta/
+/data/corpus/one_pdf_corpus
 /data/gzip/sample_meta.jsonl.gz
 /data/gzip/sample_pdf.jsonl.gz
 
-# Inner workings
-logger.log
+
 

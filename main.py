@@ -4,14 +4,10 @@ from corpus.extractor import metadata_to_csv, save_corpus, one_pdf
 
 @time_main
 def main():
-    # TODO: In logger.log file stop displaying path that originates from
-    #  m2v, or add the .log to .gitignore.
-    # TODO: Add corpus (files, not folder), gzip, and meta content to .gitignore
+    """Unzip & extract S2ORC manuscripts to corpus set for training."""
 
     save = int(input("1 -- inspect the body text of a single pdf\n"
                      "2 -- Save the corpus \nSelect option 1 or 2: "))
-
-    """Unzip & extract S2ORC manuscripts to corpus set for training."""
     if save == "2":
         print("\t\n-- Initiating S2ORC PDFs extractor --\n")
         batches = 40
@@ -40,7 +36,7 @@ def main():
             save_corpus(batch, meta_filter, segment_sentences=True,
                         remove_references=True)
             print("\nPDFs Extraction, Tokenization, & Ordering -- Complete!\n"
-                  "Corpus file:\tdata/corpus/corpus"
+                  "Path to corpus:\tdata/corpus/corpus"
                   "Local metadata file:\t /data/interim/meta")
     elif save == 1:
         print("\t\n-- Initiating S2ORC onePDF extractor --\n")
@@ -49,13 +45,13 @@ def main():
         ids = ["94551546", "138410295", "54785367"]
         dois = ["10.1038/am.2015.67", "10.1039/C3TA12002C",
                 "10.1103/PhysRevMaterials.2.023803"]
-        index = int(input("1 -- 10.1038/am.2015.67\n"
-                         "2 -- 10.1039/C3TA12002C\n"
-                         "3 -- 10.1103/PhysRevMaterials.2.023803\n"
+        index = int(input("0 -- 10.1038/am.2015.67\n"
+                         "1 -- 10.1039/C3TA12002C\n"
+                         "2 -- 10.1103/PhysRevMaterials.2.023803\n"
                           "\nSelect doi for inspection: \n" ))
         one_pdf(ids, dois, index=index)
         print("\nPDFs Extraction, Tokenization, & Ordering -- Complete!\n"
-              "Corpus saved in file:\tdata/corpus/one_pdf_corpus")
+              "Path to corpus: \tdata/corpus/one_pdf_corpus")
     else:
         print("Select either 1 or 2!")
 
