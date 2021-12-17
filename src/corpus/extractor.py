@@ -14,9 +14,7 @@ from src.corpus import timer
 
 
 dotenv_path = Path("src/.env")
-MAT2VEC_BASE = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
-
-MODULE_PATH = MAT2VEC_BASE
+MAT2VEC_PATH = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
 MODULE_NAME = "mat2vec.processing"
 
 spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)

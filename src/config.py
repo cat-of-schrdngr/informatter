@@ -3,18 +3,9 @@ from pathlib import Path
 
 from dotenv import dotenv_values
 
-import os
-# from dotenv import load_dotenv
 
 dotenv_path = Path("src/.env")
-print(dotenv_path)
-
-# load_dotenv(dotenv_path=dotenv_path)
-
-# BASE_DIR = os.getenv('BASE_DIR')
 BASE_DIR = Path(dotenv_values(dotenv_path)["BASE_DIR"])
-# BASE_DIR = Path(dotenv_values(".env")["BASE_DIR"])
-print("BASE_DIR:", BASE_DIR)
 
 
 # Path to zipped S2ORC metadata and full pdf files.
