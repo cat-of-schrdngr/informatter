@@ -7,9 +7,9 @@ def main():
 
     save = int(input("1 -- inspect the body text of a single pdf\n"
                      "2 -- Save the corpus \nSelect option 1 or 2: "))
-    if save == "2":
+    if save == 2:
         print("\t\n-- Initiating S2ORC PDFs extractor --\n")
-        batches = 40
+        batches = 41
         for batch in range(20, batches):
             # fields = ["Physics", "Chemistry", "Engineering", "Materials Science"]
             fields = ["Chemistry"]
