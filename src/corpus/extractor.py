@@ -2,20 +2,32 @@ import sys
 import gzip
 import json
 import logging
-
 import regex as re
 import pandas as pd
+import importlib.util
 from pathlib import Path
 from typing import Union, Generator
+from dotenv import dotenv_values
 
 from src.config import *
 from src.corpus import timer
 
-from mat2vec.processing import MaterialsTextProcessor
+
+dotenv_path = Path("src/.env")
+MODULE_PATH = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
+MODULE_NAME = "mat2vec.processing"
+
+spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
+module = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = module 
+spec.loader.exec_module(module)
+#print(f"module: {module}")
+
+#from mat2vec import MaterialsTextProcessor
 
 _logger = logging.getLogger(__name__)
 
-text_processor = MaterialsTextProcessor()
+text_processor = module.MaterialsTextProcessor()
 
 
 @timer
@@ -71,7 +83,7 @@ def _load_metadata_to_df(field: str, file_path: Union[str, Path],
     df = pd.DataFrame()
     # METADATA: Unzipping jsonl file.
     data = _parse_s2orc_jsonl(file_path)
-    english_check = re.compile(r'[a-zA-Z0-9αβγδεπσηχ()"”{}$*_-]')
+    english_check = re.compile(r'[a-zA-Z0-9αβγδεπσηχ()"”$*_,-:]')
     # Searching full text manuscripts.
     for line in data:
         # Save pdf of manuscripts with available full text and for selected
@@ -87,7 +99,6 @@ def _load_metadata_to_df(field: str, file_path: Union[str, Path],
                         if not english_check.match(line["title"]):
                             _msg = line["title"]
                             _logger.info(_msg)
-                            print(_msg)
                         else:
                             del line["abstract"]
                             del line["authors"]
