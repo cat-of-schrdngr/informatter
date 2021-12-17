@@ -11,7 +11,22 @@ from typing import Union, Generator
 from src.config import *
 from src.corpus import timer
 
-from mat2vec.processing import MaterialsTextProcessor
+import importlib.util
+
+spec = importlib.util.spec_from_file_location("mat2vec.processing", "/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/process.py")
+print(type(spec))
+
+mat2vec = importlib.util.module_from_spec(spec)
+print(type(mat2vec))
+
+spec.loader.exec_module(mat2vec)
+
+
+#spec = importlib.util.spec_from_file_location("module", "path/to/file.py")
+#module = importlib.util.module_from_spec(spec)
+
+#/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/process.py
+from mat2vec import MaterialsTextProcessor
 
 _logger = logging.getLogger(__name__)
 
