@@ -2,19 +2,21 @@ import sys
 import gzip
 import json
 import logging
-
 import regex as re
 import pandas as pd
+import importlib.util
 from pathlib import Path
 from typing import Union, Generator
+from dotenv import dotenv_values
 
 from src.config import *
 from src.corpus import timer
 
-import importlib.util
 
+dotenv_path = Path("src/.env")
+MAT2VEC_BASE = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
 
-MODULE_PATH = "/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/__init__.py"
+MODULE_PATH = MAT2VEC_BASE
 MODULE_NAME = "mat2vec.processing"
 
 spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
@@ -23,7 +25,6 @@ sys.modules[spec.name] = module
 spec.loader.exec_module(module)
 #print(f"module: {module}")
 
-from module import MaterialsTextProcessor
 #from mat2vec import MaterialsTextProcessor
 
 _logger = logging.getLogger(__name__)
