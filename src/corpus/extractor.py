@@ -13,24 +13,22 @@ from src.corpus import timer
 
 import importlib.util
 
-spec = importlib.util.spec_from_file_location("mat2vec.processing", "/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/process.py")
-print(type(spec))
 
-mat2vec = importlib.util.module_from_spec(spec)
-print(type(mat2vec))
+MODULE_PATH = "/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/__init__.py"
+MODULE_NAME = "mat2vec.processing"
 
-spec.loader.exec_module(mat2vec)
+spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
+module = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = module 
+spec.loader.exec_module(module)
+#print(f"module: {module}")
 
-
-#spec = importlib.util.spec_from_file_location("module", "path/to/file.py")
-#module = importlib.util.module_from_spec(spec)
-
-#/QNAP/jana/m2v007/mat2vec-master/mat2vec/processing/process.py
-from mat2vec import MaterialsTextProcessor
+from module import MaterialsTextProcessor
+#from mat2vec import MaterialsTextProcessor
 
 _logger = logging.getLogger(__name__)
 
-text_processor = MaterialsTextProcessor()
+text_processor = module.MaterialsTextProcessor()
 
 
 @timer
