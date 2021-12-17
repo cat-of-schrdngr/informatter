@@ -6,29 +6,28 @@ import regex as re
 import pandas as pd
 import importlib.util
 from pathlib import Path
-from typing import Union, Generator
 from dotenv import dotenv_values
+from typing import Union, Generator
 
 from src.config import *
 from src.corpus import timer
 
 
 dotenv_path = Path("src/.env")
-MODULE_PATH = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
-MODULE_NAME = "mat2vec.processing"
-
-spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
-module = importlib.util.module_from_spec(spec)
-sys.modules[spec.name] = module 
-spec.loader.exec_module(module)
-#print(f"module: {module}")
-
-#from mat2vec import MaterialsTextProcessor
+# TODO: Test with m2v007 in config.py!!!!
+try:
+    MODULE_PATH = Path(dotenv_values(dotenv_path)["MAT2VEC_BASE"])
+    MODULE_NAME = "mat2vec.processing"
+    spec = importlib.util.spec_from_file_location(MODULE_NAME, MODULE_PATH)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    text_processor = module.MaterialsTextProcessor()
+except KeyError:
+    from mat2vec.processing import MaterialsTextProcessor
+    text_processor = MaterialsTextProcessor()
 
 _logger = logging.getLogger(__name__)
-
-text_processor = module.MaterialsTextProcessor()
-
 
 @timer
 def metadata_to_csv(batch: int, fields: list, file_path: Union[str, Path]):

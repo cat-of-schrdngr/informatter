@@ -24,7 +24,10 @@ one_pdf_corpus = Path.cwd() / "data/corpus/one_pdf_corpus"
 meta_sample_gz = Path.cwd() / "data/gzip/sample_meta.jsonl.gz"
 pdf_sample_gz = Path.cwd() / "data/gzip/sample_pdf.jsonl.gz"
 
+# TODO: Test with m2v007 in config.py!!!!
+# m2v_lib = Path.joinpath(Path.home(), BASE_DIR, "m2v007")
 m2v_lib = Path.joinpath(Path.home(), BASE_DIR, "m2v")
+print(m2v_lib)
 try:
     sys.path.append(str(m2v_lib))
 except ModuleNotFoundError:
