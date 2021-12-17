@@ -83,7 +83,7 @@ def _load_metadata_to_df(field: str, file_path: Union[str, Path],
     df = pd.DataFrame()
     # METADATA: Unzipping jsonl file.
     data = _parse_s2orc_jsonl(file_path)
-    english_check = re.compile(r'[a-zA-Z0-9αβγδεπσηχ()"”{}$*_-]')
+    english_check = re.compile(r'[a-zA-Z0-9αβγδεπσηχ()"”$*_,-:]')
     # Searching full text manuscripts.
     for line in data:
         # Save pdf of manuscripts with available full text and for selected
@@ -99,7 +99,6 @@ def _load_metadata_to_df(field: str, file_path: Union[str, Path],
                         if not english_check.match(line["title"]):
                             _msg = line["title"]
                             _logger.info(_msg)
-                            print(_msg)
                         else:
                             del line["abstract"]
                             del line["authors"]
