@@ -16,5 +16,5 @@ Using the code provided in this repository, four corpora files were generated ba
 
 The corpora were used to generate domain-specific word embeddings using Word2vec, a natural language processing technique comprised of language model architectures for fast and efficient learning of distributed representations of words. Continuous Skip-gram model architecture with a negative sampling strategy, as implemented in the Gensim library, is employed for model training. The word embeddings, consisting of 200 and 300 vectorial components for materials science and 300 vectorial components for chemistry, physics, and mixed domains, are provided. To fully reproduce the corpora files and trained models, one is required to install the [mat2vec](https://github.com/materialsintelligence/mat2vec?tab=readme-ov-file#thermoelectric-data) module with all its requirements and use it for model training.
 
-- All domain-specific trained models - Chem300, Phys300, MatSci200, MatSci300, and Mixed300 are open-sourced [here](https://doi.org/10.6084/m9.figshare.28740122). 
+- All domain-specific trained models (Chem300, Phys300, MatSci200, MatSci300, and Mixed300) are open-sourced [here](https://doi.org/10.6084/m9.figshare.28740122). 
 
