@@ -18,7 +18,9 @@ The corpora were used to generate domain-specific word embeddings using Word2vec
 
 - All domain-specific trained models (Chem300, Phys300, MatSci200, MatSci300, and Mixed300) are open-sourced [here](https://doi.org/10.6084/m9.figshare.28740122).
 
-To cite this research and/or code, refer to the following citation:
 
+====================================================================
+To cite this research and/or code, refer to the following citation:
+--------------------------------------------------------------------
 Radaković, J., Batalović, K. & Novaković, N. Word embeddings as autonomous predictors in materials design—the effect of inherent variability on information transfer. J Cheminform 18, 20 (2026). https://doi.org/10.1186/s13321-025-01149-3
 
